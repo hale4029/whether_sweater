@@ -1,5 +1,5 @@
 class GeoLocator
-  def find_location(location)
+  def find_coordinates(location)
     resp = conn.get('json') do |req|
       req.params['address'] = location
     end

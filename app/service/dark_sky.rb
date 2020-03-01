@@ -1,8 +1,8 @@
 class DarkSky
-  def forecast(long_lat)
+  def forecast(coordinates)
     resp = conn.get('forecast') do |req|
-      req.params['latitude'] = long_lat[:latitude]
-      req.params['longitude'] = long_lat[:longitude]
+      req.params['latitude'] = coordinates[:latitude]
+      req.params['longitude'] = coordinates[:longitude]
       req.params['exclude'] = '[minutely,hourly,alert,flags]'
     end
   end
