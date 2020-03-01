@@ -17,7 +17,7 @@ gem 'puma', '~> 4.1'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'faraday'
 gem 'figaro'
-gem 'rubocop', '~> 0.79.0', require: false
+#gem 'rubocop', '~> 0.79.0', require: false
 gem 'factory_bot_rails'
 gem 'fast_jsonapi'
 gem 'faker'
