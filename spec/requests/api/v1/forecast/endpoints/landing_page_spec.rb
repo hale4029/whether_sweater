@@ -8,6 +8,7 @@ describe 'landing page data' do
     result = JSON.parse(response.body)['data']
     expect(result['attributes']['current_weather']).to_not eq(nil)
     expect(result['attributes']['daily_forecast']['data'].count).to eq(8)
+    expect(result['attributes']['hourly_forecast'].count).to eq(8)
   end
 
   it 'background endpoint' do

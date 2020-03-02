@@ -17,4 +17,8 @@ class Facade::Forecast
   def daily_forecast
     forecast['daily']
   end
+
+  def hourly_forecast
+    forecast['hourly']['data'][0..7]
+  end
 end

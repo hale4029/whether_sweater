@@ -1,7 +1,7 @@
 class DarkSkyService
   def self.forecast(coordinates)
     resp = conn.get("#{coordinates['lat']},#{coordinates['lng']}") do |req|
-      req.params['exclude'] = '[minutely,hourly,alerts,flags]'
+      req.params['exclude'] = '[minutely,alerts,flags]'
     end
     JSON.parse(resp.body, sybomlize_names: true)
   end
