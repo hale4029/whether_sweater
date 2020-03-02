@@ -6,7 +6,8 @@ describe 'landing page data' do
 
     expect(response).to be_successful
     result = JSON.parse(response.body)['data']
-    require "pry"; binding.pry
+    expect(result['attributes']['current_weather']).to_not eq(nil)
+    expect(result['attributes']['daily_forecast']['data'].count).to eq(8)
   end
 
   it 'background endpoint' do

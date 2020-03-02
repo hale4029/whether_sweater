@@ -7,18 +7,15 @@ class Facade::Forecast
   end
 
   def forecast
-    DarkSkyService.forecast(@coordinates)
+    json ||= DarkSkyService.forecast(@coordinates)
   end
 
   def current_weather
-    require "pry"; binding.pry
-    forecast
-    ['attributes']['forecast']['currently']
+    forecast['currently']
   end
 
   def daily_forecast
-    require "pry"; binding.pry
-    forecast['attributes']['forecast']['daily']
+    forecast['daily']
   end
 
 end
