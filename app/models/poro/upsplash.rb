@@ -3,12 +3,13 @@ class Poro::Upsplash
 
   def initialize(location)
     @id = nil
+    @location = location
     @coordinates = GeoLocationService.coordinates(location)
   end
 
   def weather_image
     icon = Poro::DarkSky.current_weather_icon(@coordinates)
-    json = UpsplashService.find_picture(icon)
+    json = UpsplashService.find_picture("#{@location} #{icon}")
     json['results'][0]['urls']
   end
 end

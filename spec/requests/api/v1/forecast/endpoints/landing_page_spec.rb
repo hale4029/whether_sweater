@@ -16,6 +16,7 @@ describe 'landing page data' do
     expect(response).to be_successful
 
     result = JSON.parse(response.body)['data']
+    require "pry"; binding.pry
     expect(result['attributes']['weather_image'].count).to eq(5)
   end
 end
