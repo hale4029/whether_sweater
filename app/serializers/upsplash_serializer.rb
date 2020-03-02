@@ -1,4 +1,4 @@
 class UpsplashSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :id
+  attributes :id, :weather_image
 end

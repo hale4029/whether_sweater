@@ -1,26 +1,24 @@
-class Forecast
+class Facade::Forecast
+  attr_reader :id
+
   def initialize(location)
     @id = nil
-    @coordinates = coordinates(location)
+    @coordinates = GeoLocationService.coordinates(location)
   end
 
-  def coordinates(location)
-    coords ||= GeoLocator.find_coordinates(location)
+  def forecast
+    DarkSkyService.forecast(@coordinates)
   end
 
-  def dark_sky_data
-    data ||= DarkSky.forecast(@coordinates)
+  def current_weather
+    require "pry"; binding.pry
+    forecast
+    ['attributes']['forecast']['currently']
   end
 
-  def current_weather_temp
-    dark_sky_data
+  def daily_forecast
+    require "pry"; binding.pry
+    forecast['attributes']['forecast']['daily']
   end
 
-  def current_weather_details
-    dark_sky_data
-  end
-
-  def week_forecast
-    dark_sky_data
-  end
 end
