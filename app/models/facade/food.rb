@@ -1,9 +1,8 @@
 class Facade::Food
-  attr_reader :id, :muchie, :end_location
+  attr_reader :id, :end_location
 
   def initialize(params)
     @id = nil
-    @type = 'munchie'
     @end_location = params[:end]
     @start_location = params[:start]
     @food = params[:food]
@@ -35,6 +34,7 @@ class Facade::Food
   end
 
   def restaurant
-    data = YelpService.find_restaurant(end_coordinates, @food, arrival_time)
+    yelp = Poro::Yelp.new(end_coordinates, @food, arrival_time)
+    {name: yelp.name, address: yelp.address}
   end
 end
