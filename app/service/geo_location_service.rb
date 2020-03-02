@@ -1,6 +1,6 @@
 class GeoLocationService
   def self.coordinates(location)
-    resp = conn.get('geocode/json') do |req|
+    resp = conn.get('/geocode/json') do |req|
       req.params['address'] = location
     end
     json = JSON.parse(resp.body, sybomlize_names: true)
