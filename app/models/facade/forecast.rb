@@ -17,5 +17,4 @@ class Facade::Forecast
   def daily_forecast
     forecast['daily']
   end
-
 end
