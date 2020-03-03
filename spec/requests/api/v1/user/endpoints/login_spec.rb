@@ -10,7 +10,7 @@ describe 'user logs in' do
     expect(result['attributes'].keys).to include('api_key')
   end
 
-  it 'uncesuccessful login' do
+  it 'unsuccessful login' do
     post '/api/v1/users?email=harrison483@gmail.com&password=helloworld&password_confirmation=helloworld'
     post '/api/v1/sessions?email=harrison482@gmail.com&password=helloworld'
 
