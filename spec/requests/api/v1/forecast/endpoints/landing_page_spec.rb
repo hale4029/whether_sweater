@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'landing page data' do
-  xit 'forecast information' do
+  it 'forecast information' do
     get '/api/v1/forecast?location=denver,co'
 
     expect(response).to be_successful
@@ -11,7 +11,7 @@ describe 'landing page data' do
     expect(result['attributes']['hourly_forecast'].count).to eq(8)
   end
 
-  xit 'background endpoint' do
+  it 'background endpoint' do
     get '/api/v1/backgrounds?location=denver,co'
 
     expect(response).to be_successful

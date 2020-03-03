@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'return trip details' do
-  xit 'successful' do
+  it 'successful' do
     post '/api/v1/users?email=harrison483@gmail.com&password=helloworld&password_confirmation=helloworld'
     key = JSON.parse(response.body)['data']['attributes']['api_key']
     post('/api/v1/road_trip', params: {
