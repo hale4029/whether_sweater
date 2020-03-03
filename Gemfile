@@ -21,6 +21,7 @@ gem 'figaro'
 gem 'factory_bot_rails'
 gem 'fast_jsonapi'
 gem 'faker'
+gem 'bcrypt'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
