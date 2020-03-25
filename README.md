@@ -16,7 +16,7 @@ This section should list any major frameworks that you built your project using.
 This API is hosted on Heroku 
 [Hosted](https://ancient-coast-14022.herokuapp.com/)
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/ca3ce3a5cbf5fdd6dd32
+[!Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/ca3ce3a5cbf5fdd6dd32
 
 
 Project specs can be found here
