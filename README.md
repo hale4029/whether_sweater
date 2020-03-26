@@ -2,7 +2,7 @@
 
 ## About The Project
 
-Weather Engine is a Rails API, which consumes weather, location, and Yelp data via the DarkSkyAPI, Google Geocoding API, and Yelp Fusion API, respectively. The endpoints return a variety of responses depending on the validity of the request (200, 201, 400). The API requires a user to register and login in order to obtain an API Key to access the API's remaining functionality. The response data is compiled and formated according to the story's wireframes.
+Weather Engine is a Rails API, which consumes weather, location, and Yelp data via the DarkSkyAPI, Google Geocoding API, and Yelp Fusion API, respectively. The endpoints return a variety of responses depending on the validity of the request (200, 201, 400). The API requires a user to register and login in order to obtain an API Key to access the API's remaining functionality. The response data is compiled and formatted according to the story's wireframes.
 
 ### Built With
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
